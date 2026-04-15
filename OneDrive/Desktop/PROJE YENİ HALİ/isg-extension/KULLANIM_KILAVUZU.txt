@@ -1,0 +1,280 @@
+==========================================================
+İSG DESTEK EKLENTİSİ - KURULUM REHBERİ
+Versiyon: 1.3.6
+==========================================================
+
+Bu rehber, İSG Destek eklentisini Chrome tarayıcınıza nasıl 
+kuracağınızı adım adım anlatır.
+
+==========================================================
+BÖLÜM 1: İLK KURULUM
+==========================================================
+
+ADIM 1: ZIP DOSYASINI İNDİRİN
+------------------------------
+• Size gönderilen "isg-destek-v1.3.6.zip" dosyasını bilgisayarınıza indirin
+• Dosyayı masaüstüne veya kolay bulabileceğiniz bir yere kaydedin
+
+
+ADIM 2: ZIP DOSYASINI ÇIKARIN
+------------------------------
+1. İndirdiğiniz ZIP dosyasına sağ tıklayın
+2. "Tümünü Çıkar..." seçeneğine tıklayın
+3. Çıkarılacak yer olarak masaüstünü seçin
+4. "Çıkar" butonuna tıklayın
+
+NOT: Çıkarıldıktan sonra "isg-destek-v1.3.6" adında bir klasör oluşacak
+
+
+ADIM 3: CHROME'DA EKLENTİLER SAYFASINI AÇIN
+------------------------------
+1. Chrome tarayıcısını açın
+2. Adres çubuğında şunu yazın ve ENTER'a basın:
+   
+   chrome://extensions/
+
+3. Eklentiler sayfası açılacak
+
+
+ADIM 4: DEVELOPER MODE'A GEÇİN
+------------------------------
+1. Eklentiler sayfasının sağ üst köşesinde "Geliştirici modu" 
+   (Developer mode) yazan bir anahtar göreceksiniz
+2. Bu anahtarı AÇIK hale getirin (ON)
+
+NOT: Geliştirici modu açılınca sayfanın üstünde yeni butonlar görünecek
+
+
+ADIM 5: EKLENTİYİ YÜKLEYİN
+------------------------------
+1. Sol üstte "Paketlenmemiş öğe yükle" (Load unpacked) butonuna tıklayın
+2. Açılan pencerede, ADIM 2'de çıkardığınız klasörü seçin:
+   
+   masaüstü/isg-destek-v1.3.6/
+
+3. "Klasör Seç" butonuna tıklayın
+4. Eklenti yüklenecek ve listede görünecek
+
+
+ADIM 6: KURULUMU DOĞRULAYIN
+------------------------------
+Eklenti listesinde şunları görmelisiniz:
+• İsim: "İSG Destek"
+• Versiyon: "1.3.6"
+• Durum: "Etkin" (yeşil gösterge)
+
+✅ Kurulum başarılı!
+
+
+==========================================================
+BÖLÜM 2: EKLENTİYİ KULLANMA
+==========================================================
+
+ADIM 1: OSGB SİSTEMİNE GİRİŞ YAPIN
+------------------------------
+1. Chrome'da OSGB sisteminize giriş yapın:
+   
+   https://isgdestek.com.tr
+   
+   VEYA yerel sunucu için:
+   
+   http://localhost:3000
+
+2. Kullanıcı adı ve şifreniz ile giriş yapın
+
+
+ADIM 2: İSG-KATİP SİSTEMİNE GİRİŞ YAPIN
+------------------------------
+1. Yeni bir sekme açın
+2. İSG-KATİP sistemine gidin:
+   
+   https://isgkatip.csgb.gov.tr
+
+3. E-Devlet şifreniz ile giriş yapın
+
+
+ADIM 3: EKLENTİNİN ÇALIŞTIĞINI KONTROL EDİN
+------------------------------
+1. İSG-KATİP sayfasında, sağ üst köşede küçük bir pencere göreceksiniz:
+   
+   ┌─────────────────────────┐
+   │ 🛡️ OSGB Köprüsü (v1.3.6)│
+   │ Şube: DENİZLİ          │
+   │                        │
+   │ [Verileri Topla]        │
+   └─────────────────────────┘
+
+2. "Şube" kısmı YEŞİL renkte olmalı
+3. "Verileri Topla ve Aktar" butonu AKTİF olmalı
+
+
+ADIM 4: SENKRONIZASYON YAPIN
+------------------------------
+1. "Verileri Topla ve Aktar" butonuna tıklayın
+2. İşlem tamamlanana kadar bekleyin
+3. Başarılı mesajı göreceksiniz:
+   
+   "✓ BAŞARILI: 15 İşyeri güncellendi."
+
+
+==========================================================
+BÖLÜM 3: OTOMATİK ŞUBE SEÇİMİ
+==========================================================
+
+EKLENTİ v1.3.6 AKILLI ŞUBE ALGILAMA ÖZELLİĞİNE SAHİPTİR!
+
+SENARYO 1: TEK ŞUBELİ OSGB
+------------------------------
+• OSGB'nizin sadece 1 şubesi varsa
+• Eklenti OTOMATİK olarak o şubeyi seçer
+• Manuel şube seçmenize GEREK YOK!
+
+Console'da şunu göreceksiniz:
+"Tek şube algılandı, otomatik seçiliyor: DENİZLİ"
+
+
+SENARYO 2: ŞUBESİZ OSGB (MERKEZ)
+------------------------------
+• OSGB'nizin şube bilgisi yoksa
+• Eklenti "Merkez (Tek Şube)" olarak algılar
+• Senkronizasyon sorunsuz çalışır
+
+
+SENARYO 3: ÇOK ŞUBELİ OSGB
+------------------------------
+• OSGB'nizin birden fazla şubesi varsa
+• OSGB sisteminden şube seçmeniz gerekir
+• Ana sayfadan şubenizi seçin, eklenti otomatik algılar
+
+
+==========================================================
+BÖLÜM 4: GÜNCELLEME
+==========================================================
+
+Yeni versiyon çıktığında güncelleme yapmak çok kolay!
+
+YÖNTEM 1: REFRESH (EN KOLAY)
+------------------------------
+1. Chrome'da chrome://extensions/ sayfasına gidin
+2. "İSG Destek" eklentisini bulun
+3. 🔄 "Yenile" (Refresh) butonuna tıklayın
+4. İSG-KATİP sayfasını F5 ile yenileyin
+5. Yeni versiyon aktif olacak!
+
+
+YÖNTEM 2: YENİDEN YÜKLEME
+------------------------------
+1. chrome://extensions/ sayfasına gidin
+2. Eski "İSG Destek" eklentisini "Kaldır" ile silin
+3. Yeni ZIP dosyasını çıkarın
+4. "Paketlenmemiş öğe yükle" ile yeni klasörü seçin
+
+
+==========================================================
+BÖLÜM 5: SORUN GİDERME
+==========================================================
+
+SORUN: Eklenti görünmüyor
+------------------------------
+ÇÖZÜM:
+• chrome://extensions/ sayfasına gidin
+• "Geliştirici modu" AÇIK mı kontrol edin
+• "Paketlenmemiş öğe yükle" ile tekrar yükleyin
+
+
+SORUN: "Şube seçmelisin" uyarısı alıyorum
+------------------------------
+ÇÖZÜM:
+• OSGB sisteminize giriş yapın
+• Ana sayfada şube seçin
+• İSG-KATİP sayfasını yenileyin (F5)
+• Eklenti otomatik algılayacak
+
+
+SORUN: "Verileri Topla" butonu aktif değil
+------------------------------
+ÇÖZÜM:
+• OSGB sisteminde oturum açık mı kontrol edin
+• İSG-KATİP'te oturum açık mı kontrol edin
+• Sayfayı yenileyin (F5)
+
+
+SORUN: Senkronizasyon hatası
+------------------------------
+ÇÖZÜM:
+• F12 tuşuna basın (Developer Console)
+• "Console" sekmesine geçin
+• Hata mesajını kopyalayın
+• Destek ekibine gönderin
+
+
+SORUN: Eklenti versiyonu eski görünüyor
+------------------------------
+ÇÖZÜM:
+• chrome://extensions/ sayfasına gidin
+• 🔄 "Yenile" butonuna tıklayın
+• İSG-KATİP sayfasını F5 ile yenileyin
+• Console'da versiyon numarasını kontrol edin
+
+
+==========================================================
+BÖLÜM 6: GÜVENLİK NOTLARI
+==========================================================
+
+✅ EKLENTİ GÜVENLİ Mİ?
+------------------------------
+• Evet, eklenti sadece İSG-KATİP ve İSG Destek sistemleri 
+  arasında veri aktarımı yapar
+• Başka hiçbir siteye veri göndermez
+• Şifrelerinizi kaydetmez
+
+
+🔒 VERİLERİM GÜVENDE Mİ?
+------------------------------
+• Eklenti sadece sizin yetkili olduğunuz verilere erişir
+• Tüm veri aktarımı şifreli bağlantı (HTTPS) üzerinden yapılır
+• OSGB sisteminizdeki oturum bilgileriniz kullanılır
+
+
+⚠️ NELERE DİKKAT ETMELİYİM?
+------------------------------
+• Eklentiyi sadece resmi kaynaklardan indirin
+• ZIP dosyasını kimseye göndermeyin
+• Chrome'da "Geliştirici modu"nu sadece eklenti kurarken açın
+• Kurulumdan sonra kapatabilirsiniz (ama güncelleme için tekrar açmanız gerekir)
+
+
+==========================================================
+BÖLÜM 7: DESTEK
+==========================================================
+
+YARDIM ALMAK İÇİN:
+------------------------------
+• E-posta: destek@isgdestek.com.tr
+• Telefon: [Destek numaranız]
+• WhatsApp: [Varsa numara]
+
+
+HATA BİLDİRİRKEN:
+------------------------------
+Lütfen şu bilgileri ekleyin:
+1. Eklenti versiyonu (örn: 1.3.6)
+2. Chrome versiyonu (chrome://version/ sayfasından)
+3. Hata mesajı (tam olarak ne yazıyor)
+4. Console logları (F12 > Console > sağ tık > Save as)
+
+
+==========================================================
+TEŞEKKÜRLER!
+==========================================================
+
+İSG Destek Eklentisi'ni tercih ettiğiniz için teşekkür ederiz!
+
+Sorularınız için bizimle iletişime geçmekten çekinmeyin.
+
+İyi çalışmalar! 🚀
+
+==========================================================
+Versiyon: 1.3.6
+Son Güncelleme: 14 Nisan 2026
+==========================================================

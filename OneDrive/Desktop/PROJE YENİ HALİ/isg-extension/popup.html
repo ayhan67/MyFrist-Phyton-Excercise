@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 320px;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            margin: 0;
+        }
+
+        .header {
+            background: #c41e3a;
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header h1 {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .content {
+            padding: 15px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .section-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #64748b;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .status-label {
+            color: #64748b;
+        }
+
+        .status-value {
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .input-group {
+            margin-top: 10px;
+        }
+
+        .input-group label {
+            font-size: 12px;
+            color: #1e293b;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            font-size: 12px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #f1f5f9;
+            color: #475569;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .btn:disabled {
+            background: #cbd5e1;
+            cursor: not-allowed;
+        }
+
+        .footer {
+            padding: 10px;
+            text-align: center;
+            font-size: 10px;
+            color: #94a3b8;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .auth-alert {
+            padding: 10px;
+            background: #fee2e2;
+            color: #ef4444;
+            font-size: 12px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="icons/icon48.png" width="30">
+        <h1>İSG DESTEK</h1>
+    </div>
+
+    <div class="content">
+        <div id="authAlert" class="auth-alert" style="display: none;">
+            ⚠ OSGB Oturumu bulunamadı! Lütfen sisteme giriş yapın.
+        </div>
+
+        <div class="card">
+            <span class="section-title">Canlı Durum</span>
+            <div class="status-item">
+                <span class="status-label">İSG Katip:</span>
+                <span class="status-value" id="katipStatus">Kontrol...</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">OSGB Sistem:</span>
+                <span class="status-value" id="osgbStatus">Kontrol...</span>
+            </div>
+            <button id="syncNowBtn" class="btn btn-primary" disabled>
+                Şimdi Senkronize Et
+            </button>
+        </div>
+
+        <div class="card">
+            <span class="section-title">Ayarlar</span>
+            <div class="input-group">
+                <label>Backend URL:</label>
+                <input type="text" id="backendUrl" class="form-input" placeholder="https://isgdestek.com.tr">
+            </div>
+            <button id="saveSettingsBtn" class="btn btn-secondary">
+                Ayarları Kaydet
+            </button>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2026 OSGB Pro • v1.3.5 • <span id="version">Stabil</span>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
