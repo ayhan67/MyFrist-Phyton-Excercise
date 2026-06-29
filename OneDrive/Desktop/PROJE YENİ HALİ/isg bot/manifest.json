@@ -1,0 +1,51 @@
+{
+   "background": {
+      "service_worker": "service-worker.js",
+      "type": "module"
+   },
+   "content_scripts": [],
+   "description": "İSG Katip sözleşme ve personel yönetimini otomatikleştiren Chrome uzantısı. Zamandan tasarruf edin, hata riskini minimize edin.",
+   "host_permissions": [
+      "https://isgkatip.csgb.gov.tr/*",
+      "https://isgpratik.com/*",
+      "https://www.isgpratik.com/*",
+      "https://isgpratik.com.tr/*",
+      "https://www.isgpratik.com.tr/*",
+      "https://*.isgpratik.com.tr/*",
+      "http://localhost:3000/*"
+   ],
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm6VELzNrwhCOf2FPv7H4l+nybefiyAJ8GpBoCFU/wsO26b4LO3gP3zO6QvOUfBioBt4wM7bUzFhN57Te/VqDIzQpqM3CYtopAaez7SCSgNlwmkue2c16KvIuEzvMvnGNbqs1O8EY+K+y5ZBmzhSQckFiA/QRVNGho8AK4z4hQRIiQwsD9/6TMivnA5MCtmGLbB66h2osINj8YmE9Sf6rvGKun9IoVDi/qqSDJIOXaUMQev2JonnDAmrQqKfot/hwbZO3ojPF/ldE8ZXbYHPkN2tR+HeiHb9mnWu4wamYeJXca4sST4GONOBtV5UzyP1kMMdaLdoKPdzOGMM/YJqSOQIDAQAB",
+   "manifest_version": 3,
+   "name": "İSGPratik Bot",
+   "permissions": [
+      "storage",
+      "scripting",
+      "clipboardWrite",
+      "activeTab"
+   ],
+   "externally_connectable": {
+      "matches": [
+         "https://isgpratik.com/*",
+         "https://www.isgpratik.com/*",
+         "https://isgpratik.com.tr/*",
+         "https://www.isgpratik.com.tr/*",
+         "https://*.isgpratik.com.tr/*",
+         "http://localhost:3000/*"
+      ]
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.4.32",
+   "web_accessible_resources": [
+      {
+         "matches": [
+            "<all_urls>"
+         ],
+         "resources": []
+      }
+   ]
+}

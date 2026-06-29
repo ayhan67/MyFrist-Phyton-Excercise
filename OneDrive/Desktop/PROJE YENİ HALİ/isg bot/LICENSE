@@ -1,0 +1,25 @@
+```
+Copyright (c) 2025 İSG Pratik (isgpratik.com)
+
+Tüm hakları saklıdır.
+
+Bu yazılım ve ilişkili dokümantasyon dosyaları ("Yazılım") İSG Pratik'in mülkiyetindedir.
+
+Lisans Koşulları:
+- Bu yazılım yalnızca geçerli bir lisans anahtarı ile kullanılabilir.
+- Yazılımın kopyalanması, dağıtılması veya değiştirilmesi yasaktır.
+- Tersine mühendislik veya kaynak kodunun çözülmesi yasaktır.
+- Ticari amaçlarla izinsiz kullanım yasaktır.
+
+İhlal edenler yürürlükteki yasalara göre hukuki ve cezai yaptırımlara tabi tutulacaktır.
+
+Destek ve iletişim: destek@isgpratik.com
+Web: https://www.isgpratik.com
+
+---
+
+MIT License (Üçüncü Taraf Kütüphaneler İçin)
+
+Yukarıdaki lisans koşulları üçüncü taraf kütüphaneler (exceljs, xlsx vb.) için geçerli değildir.
+Bu kütüphaneler kendi lisansları altında dağıtılmaktadır.
+```
